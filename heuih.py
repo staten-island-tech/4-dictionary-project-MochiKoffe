@@ -40,11 +40,16 @@ for index, item in enumerate(solarballs):
     print(index, ":", item["name"])
 
 cart=[]
+total 
 purchasing = ""
-while purchasing != : 
-    purchasing = input("what will you like to buy")
+
+
+while purchasing != "done":
+    purchasing = input("what will you like to buy (say done to stop)")
     cart.append(purchasing)
 
+if item in cart:
+    total.append(cart)
 
-if pur
-    print("good choice *breakdances*,", cart)
+if purchasing == "done":
+    print("good choice *breakdances*,", cart, total)
