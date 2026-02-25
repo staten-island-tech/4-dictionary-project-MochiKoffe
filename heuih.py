@@ -39,7 +39,12 @@ print(solarballs[2]["name"]) """
 for index, item in enumerate(solarballs):
     print(index, ":", item["name"])
 
+cart=[]
 purchasing = ""
-while purchasing != item["name"]: 
+while purchasing != : 
     purchasing = input("what will you like to buy")
-    print("good choice *breakdances*,", purchasing)
+    cart.append(purchasing)
+
+
+if pur
+    print("good choice *breakdances*,", cart)
