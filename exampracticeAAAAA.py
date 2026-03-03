@@ -36,19 +36,32 @@ def honi (word):
     O=0
     N=0
     I=0
+    current = "H"
     HONI = 0
-    for i in range(len(word)):
-        if word[i] == "H":
+    for i in range (len(word)):
+        if word[i] == current:
             H += 1
-        if word[i] == "O":
+        current == "O"
+        if word[i] == current:
             O += 1
-        if word[i] == "N": 
+        current == "N"
+        if word[i] == current: 
             N += 1
-        if word[i] == "I":
+        current == "I"
+        if word[i] == current:
             I += 1
-        if H+O+N+I % i == 1:
+        if H+O+N+I == 4:
             HONI += 1
-    print(H,O,N,I,HONI)
+            H=0
+            O=0
+            N=0
+            I=0
+            current = "H"
+        else: 
+            HONI == 0
+    print(HONI)
+honi("PROHODNIHODNIK")
+honi("HHHHOOOONNNNIIII")
 honi("MAGNUS")
 
 """ def add (x,y):
