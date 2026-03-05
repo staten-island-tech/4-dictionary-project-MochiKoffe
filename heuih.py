@@ -46,9 +46,10 @@ total = 0
 
 while purchasing != "done":
     purchasing = input("what will you like to buy (say done to stop)")
-    cart.append(purchasing)
-for item in cart:
-    total = item["price"]
+    for i in solarballs:
+        if purchasing == i: 
+            cart.append(solarballs[i]["name"])
+            total += solarballs[i]["price"]
 
 
 if purchasing == "done":
