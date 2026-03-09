@@ -51,15 +51,35 @@ magnus("MAGNUS")
 magnus("PROHODNIHODNIK") """
 
 
-def multi (number, answers, correct): 
+""" def multi (number, answers, correct): 
     right = 0
     for i in range (len(answers)): 
         if answers[i] == correct[i]: 
             right += 1
     print(right)
 multi(3, "AAA", "ABA")
-multi(3, "ACB", "ABC")
+multi(3, "ACB", "ABC") """
 
+""" def check_password(password): 
+    upper_check = 0
+    lower_check = 0
+    digit_check = 0
+    for char in password: 
+        if char.isUpper():
+            upper_check += 1
+    if len(password) > 8 and len(password) < 12: 
+        if upper_check > 3 and lower_check > 1 and digit_check > 1: 
+            print('valid') """
+
+
+def megabyte (mega, months, usage):
+    value = mega
+    for i in range(months): 
+        if value > 0: 
+            value -= usage[i]
+            value += mega
+    print(value)
+megabyte(10, 3, [4,6,2])
 
 
 """ def add (x,y):
