@@ -34,6 +34,17 @@ print(solarballs[2]["name"]) """
 """ for index, item in enumerate(solarballs):
     print(index, ":", item["name"], item["department"], item["description"]) """
 
+""" def showItems(items): 
+    for index, item in enumerate (items): 
+        print(index,":", item["name"])
+def thing(): 
+    showItems(solarballs)
+    x = int(input("buy?"))
+    print(solarballs[x])
+showItems(solarballs) 
+print(solarballs[0])
+thing() """
+
 
 
 for index, item in enumerate(solarballs):
@@ -42,25 +53,11 @@ for index, item in enumerate(solarballs):
 cart=[]
 prices = []
 purchasing = ""
-money = ""
 
-
-while purchasing != "done":
-    purchasing = input("what will you like to buy (say done to stop)")
-    cart.append(purchasing)
-    money = float(input("gimme the cost of it boy (type '0' to finish: "))
-    prices.append(money)
-if 'done':
-    input("do you wish to continue...")
-elif 'yes': 
-    input("thank you for your patronage...return for more peak")
-elif 'no': 
-    purhcasing = input("which solarballsballsballs you want")
-    cart.append(purchasing)
-    money = float(input("GIMME THE COST OF IT"))
-    prices.append(money)
-print(cart, prices)
-total = sum(prices)
-
+while purchasing!= "done": 
+    purchasing = int(input("buy?"))
+    solar = solarballs[purchasing]
+    cart.append(solar)
+    print(cart)
+    wee = input("continue?")
 print(cart, total)
-     
