@@ -48,16 +48,29 @@ thing() """
 
 
 for index, item in enumerate(solarballs):
-    print(index, ":", item["name"], item["price"])
+    print(index, ":", item["name"], item["price"]) #print dictionary
 
 cart=[]
-prices = []
-purchasing = ""
+total = 0 #variables to print at the end
 
-while purchasing!= "done": 
-    purchasing = int(input("buy?"))
-    solar = solarballs[purchasing]
-    cart.append(solar)
-    print(cart)
-    wee = input("continue?")
-print(cart, total)
+
+purchasing = int(input("buy?")) #question
+cart.append(solarballs[purchasing]) #add item (all of info) into cart
+print(cart)
+total += solarballs[purchasing]['price'] #add the price of it to the total
+
+while True: #if the loop doesnt break
+    checkout = input("Do you wish to continue shopping?(yes/no)") #continue shopping?
+    if checkout == "yes": #if yes
+        purchasing = int (input("What else would you like to buy?")) #repeat original code
+        cart.append(solarballs[purchasing])
+        print(cart)
+        total += solarballs[purchasing]['price']
+    elif checkout == "no": #if no
+        break #break the loop, making it false
+    else: #unnecessary
+        print("say yes/no")
+
+for item in cart: #in the cart for each item, print the name and its price
+    print(f"{(item['name'])}, ${float(item['price'])}") #print each ones name and price as a float (f formats the string so it is "name, $price")
+print(f"Total: ${total}") #print what the total is
